@@ -2,7 +2,8 @@
 from PIL import Image, ImageDraw, ImageFont
 import pandas as pd
 import os
-df = pd.read_csv('list.csv')
+clname=['name']
+df = pd.read_csv('list.csv',names=clname,header=None)
 font = ImageFont.truetype('arial.ttf',60)
 for index,j in df.iterrows():
     img = Image.open('certificate.jpg')
